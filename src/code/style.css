@@ -1,0 +1,358 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    background: #f4f4f4;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Hero Section */
+.hero {
+    background: #007bff;
+    color: white;
+    padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Join Section */
+.why-join {
+    background: #f9f9f9;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    color: #007bff;
+}
+
+/* Events */
+.event-card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials */
+.testimonials {
+    background: #007bff;
+    color: white;
+}
+
+.testimonial {
+    margin: 20px auto;
+    width: 50%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-in effect for sections */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    .event-card {
+        width: 90%;
+    }
+
+    .testimonial {
+        width: 90%;
+    }
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0044cc;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+/* Tabs Styling */
+.nav-links li {
+    margin: 0 15px;
+}
+
+/* Default Tab Styling */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background: white;
+    color: #0044cc;
+}
+
+/* Active Tab */
+.nav-links a.active {
+    background: white;
+    color: #0044cc;
+    font-weight: bold;
+}
+
+/* Mobile Menu Button */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0044cc;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* About Us Hero Section */
+.about-hero {
+    background: #007bff;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Founder Section */
+.founder {
+    background: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.founder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    opacity: 1;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.founder img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.founder-info h3 {
+    color: #0044cc;
+}
+
+.founder-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Mission Section */
+.mission {
+    text-align: center;
+    padding: 40px 20px;
+    background: #0044cc;
+    color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .founder-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder img {
+        margin-bottom: 15px;
+    }
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    background: #007bff;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    font-size: 18px;
+}
+
+/* Icons */
+.contact-item i {
+    font-size: 24px;
+    color: #0044cc;
+    margin-right: 10px;
+}
+
+/* Email & Phone Links */
+.contact-item a {
+    text-decoration: none;
+    color: #0044cc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}
+
